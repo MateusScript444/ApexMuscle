@@ -1,4 +1,3 @@
-loadstring([[ 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TS = game:GetService("TeleportService")
@@ -253,7 +252,7 @@ task.spawn(function()
 
         if rightHand and leftHand then
             for _, target in ipairs(Players:GetPlayers()) do
-                if target \~= LocalPlayer and target.Character then
+                if target ~= LocalPlayer and target.Character then
                     local targetRoot = target.Character:FindFirstChild("HumanoidRootPart")
                     local humanoid = target.Character:FindFirstChild("Humanoid")
                     
@@ -320,4 +319,3 @@ task.spawn(function()
         TS:Teleport(game.PlaceId)
     end
 end)
-]])()
